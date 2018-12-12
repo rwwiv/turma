@@ -13,5 +13,5 @@ mvn package
 java -jar target/project2-0.1.jar {filepath & filename of dfa file} {input string}
 ```
 
-        Will fail with exit code (-1) on invalid input
+ Will fail with exit code (-1) on invalid input
 
