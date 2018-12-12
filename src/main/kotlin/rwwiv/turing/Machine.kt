@@ -36,7 +36,8 @@ class Machine(init: Init, instructions: List<Instruction>, input: List<Char>) {
 				else -> throw Exception("Input contains invalid characters $invalidChars")
 			}
 		}
-		if (!validInstructions.first) throw Exception("Syntax error at instruction ${validInstructions.second + 1}: ${validInstructions.third}.")
+		if (!validInstructions.first) throw Exception("Syntax error at instruction ${validInstructions.second + 1}: " +
+			"${validInstructions.third}.")
 	}
 	
 	fun run() {

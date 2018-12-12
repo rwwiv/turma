@@ -146,7 +146,8 @@ fun main(args: Array<String>) {
 					) {
 						val direction: Direction
 						val tupleList = mutableListOf("", ' ', ' ', "")
-						if (lineList[index].toLowerCase().startsWith("rwrt") || lineList[index].toLowerCase().startsWith("rwlt")) {
+						if (lineList[index].toLowerCase().startsWith("rwrt") ||
+							lineList[index].toLowerCase().startsWith("rwlt")) {
 							direction = Direction.valueOf(lineList[index][2].toString())
 							if (Instructions.rwDtParser.accept(lineList[index])) {
 								val parseResult = Instructions.rwDtParser.parse(lineList[index])
@@ -181,7 +182,8 @@ fun main(args: Array<String>) {
 								val instruction = Instruction(direction, tuple)
 								instructions.add(instruction)
 							}
-						} else if (lineList[index].toLowerCase().startsWith("rrl") || lineList[index].toLowerCase().startsWith("rll")) {
+						} else if (lineList[index].toLowerCase().startsWith("rrl") ||
+							lineList[index].toLowerCase().startsWith("rll")) {
 							direction = Direction.valueOf(lineList[index][1].toString())
 							if (Instructions.rDlParser.accept(lineList[index])) {
 								val parseResult = Instructions.rDlParser.parse(lineList[index])
@@ -207,7 +209,8 @@ fun main(args: Array<String>) {
 								val instruction = Instruction(direction, tuple)
 								instructions.add(instruction)
 							}
-						} else if (lineList[index].toLowerCase().startsWith("rrt") || lineList[index].toLowerCase().startsWith("rlt")) {
+						} else if (lineList[index].toLowerCase().startsWith("rrt") ||
+							lineList[index].toLowerCase().startsWith("rlt")) {
 							direction = Direction.valueOf(lineList[index][1].toString())
 							if (Instructions.rDtParser.accept(lineList[index])) {
 								val parseResult = Instructions.rDtParser.parse(lineList[index])
